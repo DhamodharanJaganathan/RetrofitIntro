@@ -2,7 +2,6 @@ package com.journaldev.retrofitintro.pojo;
 
 
 import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 public class Sample {
@@ -45,6 +44,7 @@ public class Sample {
   }
 
   public static class DataEntity {
+
     /**
      * id : 1
      * countryName : United States

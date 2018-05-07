@@ -4,10 +4,12 @@ import retrofit2.Call;
 import retrofit2.Response;
 
 public class RetryHelper {
+
   private static final int DEFAULT_RETRIES = 0;
   private static int SUCCESS_CODE = 200;
 
-  public static <T> void enqueueRetry(Call<T> call, final int retryCount, final CustomCallback<T> callback) {
+  public static <T> void enqueueRetry(Call<T> call, final int retryCount,
+      final CustomCallback<T> callback) {
     call.enqueue(new RetryCallback<T>(call, retryCount) {
       @Override
       public void onFinalFail(int errorCode, Call<T> call, Response<T> response) {

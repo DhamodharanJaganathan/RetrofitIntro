@@ -4,7 +4,6 @@ import com.journaldev.retrofitintro.pojo.MultipleResource;
 import com.journaldev.retrofitintro.pojo.Retry_pojo.RetrypolicyPOJO;
 import com.journaldev.retrofitintro.pojo.User;
 import com.journaldev.retrofitintro.pojo.UserList;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -19,19 +18,19 @@ import retrofit2.http.Query;
 
 interface APIInterface {
 
-    @GET("/api/unknown")
-    Call<MultipleResource> doGetListResources();
+  @GET("/api/unknown")
+  Call<MultipleResource> doGetListResources();
 
-    @GET("/api/unknown")
-    Call<RetrypolicyPOJO> doGetListResources_retry();
+  @GET("/api/unknown")
+  Call<RetrypolicyPOJO> doGetListResources_retry();
 
-    @POST("/api/users")
-    Call<User> createUser(@Body User user);
+  @POST("/api/users")
+  Call<User> createUser(@Body User user);
 
-    @GET("/api/users?")
-    Call<UserList> doGetUserList(@Query("page") String page);
+  @GET("/api/users?")
+  Call<UserList> doGetUserList(@Query("page") String page);
 
-    @FormUrlEncoded
-    @POST("/api/users?")
-    Call<UserList> doCreateUserWithField(@Field("name") String name, @Field("job") String job);
+  @FormUrlEncoded
+  @POST("/api/users?")
+  Call<UserList> doCreateUserWithField(@Field("name") String name, @Field("job") String job);
 }

@@ -173,7 +173,6 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onResponse(Call<RetrypolicyPOJO> call, Response<RetrypolicyPOJO> response) {
 
-
         Toast.makeText(MainActivity.this, response.body().getData().get(0).getColor(), Toast
             .LENGTH_SHORT)
             .show();
